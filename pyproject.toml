@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csvmerge-cli"
+version = "1.0.0"
+description = "Concatenate CSV files that share the same columns into one output CSV, with header validation."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "All Rights Reserved" }
+authors = [{ name = "sidcore-dev" }]
+keywords = ["csv", "cli", "devtools"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+csvmerge-cli = "csvmerge_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
